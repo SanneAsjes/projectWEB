@@ -1,0 +1,21 @@
+#one {
+    position: absolute;
+    left: 10em;
+    width: 10em;
+}
+
+#two {
+    position: absolute;
+    left: 30em;
+    width:10em;
+}
+
+#three {
+    position: absolute;
+    left: 50em;
+    width: 10em;
+}
+
+/* positioning: Heb je invloed op waar je de elementen neerzet en hoe ze zich gedragen (relative/static onderelkaar absolute:
+je trekt ze los, kan overal plaatsen waar je wilt.) Inline-block: Die zegt dat alles wat je defineert een blok element is en
+plaatst deze naast elkaar wanneer de breedte dit toelaat.*/
