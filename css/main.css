@@ -1,66 +1,77 @@
+/*
+Kleurcodes
+  Donkerblauw:
+    hex: #002B45
+  Middenblauw:
+    hex: #1B5786
+  Lichtblauw:
+    hex: #85BCE9
+  Oranje:
+    hex: #F6861F
+  Donkergrijs:
+    hex: #434950
+  Middengrijs:
+    hex: #6D6F71
+  lichtgrijs:
+    hex: #EEF0F1
+
+font-family: DFDS Bold;
+font-family: DFDS Light;
+
+font-family: Segoe UI;
+
+Voor titels altijd UPPERCASE en Bold.
+
+*/
+
 *{
-  box-sizing: border-box;
-  font-size: 1em;
+  font-family: DFDS Light;
+  color: #002B45;
+  background-color: #EEF0F1;
 }
 
-h2{
-  font-size: 2.5em;
+h2, h3{
+  font-family: DFDS Bold;
+  text-transform: uppercase;
+}
+
+h3{
+  background-color: #fff;
+  margin-left: 1.8em;
+}
+
+nav > ul > li > a{
+  margin-right: 5em;
 }
 
 p{
-  line-height: 1.2em;
+  font-family: Segoe UI;
+  font-weight: normal;
+  font-size: 1.1em;
+  background-color: #fff;
+  margin: 2em;
+}
+
+header{
+  display: flex;
+  justify-content: space-around;
+}
+
+ul {
+  display: flex;
+  margin-left: 5em;
 }
 
 container{
   display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
 
-@media only screen and (min-width: 420px)  {
-  article{
-    -webkit-columns: 1 20em;
-    -moz-columns: 1 20em;
-    columns: 1 20em;
-
-    -webkit-column-gap: 1em;
-    -moz-column-gap: 1em;
-    column-gap:1em;
-  }
-  h2{
-    font-size: 2em;
-  }
-  h3{
-    order: 3;
-  }
+container > item{
+  width: 25em;
+  margin: 5em;
+  background-color: #fff;
 }
 
-@media only screen and (min-width: 668px)  {
-  article{
-    -webkit-columns: 2 20em;
-    -moz-columns: 2 20em;
-    columns: 2 20em;
-
-    -webkit-column-gap: 2em;
-    -moz-column-gap: 2em;
-    column-gap:2em;
-  }
-  h2{
-    font-size: 3em;
-  }
-}
-
-@media only screen and (min-width: 968px) {
-  article{
-    -webkit-columns: 3 20em;
-    -moz-columns: 3 20em;
-    columns: 3 20em;
-
-    -webkit-column-gap: 3em;
-    -moz-column-gap: 3em;
-    column-gap:3em;
-  }
-  h2{
-    font-size: 3.5em;
-  }
+item > p >a{
+  background-color: #fff;
 }

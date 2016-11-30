@@ -16,6 +16,84 @@
     width: 10em;
 }
 
+*{
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+h2{
+  font-size: 2.5em;
+}
+
+p{
+  line-height: 1.2em;
+}
+
+container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 420px)  {
+  article{
+    -webkit-columns: 1 20em;
+    -moz-columns: 1 20em;
+    columns: 1 20em;
+
+    -webkit-column-gap: 1em;
+    -moz-column-gap: 1em;
+    column-gap:1em;
+  }
+  h2{
+    font-size: 2em;
+  }
+  h3{
+    order: 3;
+  }
+  p{
+    font-size: 1.2em;
+  }
+}
+
+
+@media only screen and (min-width: 668px)  {
+  article{
+    -webkit-columns: 2 20em;
+    -moz-columns: 2 20em;
+    columns: 2 20em;
+
+    -webkit-column-gap: 2em;
+    -moz-column-gap: 2em;
+    column-gap:2em;
+  }
+  h2{
+    font-size: 3em;
+  }
+  p{
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 968px) {
+  article{
+    -webkit-columns: 3 20em;
+    -moz-columns: 3 20em;
+    columns: 3 20em;
+
+    -webkit-column-gap: 3em;
+    -moz-column-gap: 3em;
+    column-gap:3em;
+  }
+  h2{
+    font-size: 3.5em;
+  }
+  p{
+    font-size: 1em;
+  }
+}
+
+
 /* positioning: Heb je invloed op waar je de elementen neerzet en hoe ze zich gedragen (relative/static onderelkaar absolute:
 je trekt ze los, kan overal plaatsen waar je wilt.) Inline-block: Die zegt dat alles wat je defineert een blok element is en
 plaatst deze naast elkaar wanneer de breedte dit toelaat.*/
