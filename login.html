@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
     <meta name="viewport" content="width=device-width" />
 
 <title>Login</title>
@@ -30,13 +31,25 @@
       <li><a href="mijnverhalen">Mijn verhalen</a></li>
     </ul>
   </nav>
-  
-  <form action="login">
-    <label for="username">Gebruikersnaam of email</label>
-    <label for="username"><input type="text" name="username"></label>
-    <label for="password"><input type="password" name="password"></label>
-    <input type="submit" value="submit">
-  </form>
+
+  <form>
+  <fieldset>
+    <legend>
+      login
+    </legend>
+    <ul>
+    </li>
+    <label for="naam">naam</label><input id ="naam" type="text">
+  </li>
+  <li>
+    <label for="wachtwoord">wactwoord </label><input id="wachtwoord" type="password">
+  </li>
+</ul>
+    <button type="submit">Login</button>
+  </fieldset>
+</form>
+
+
   <footer>
   </footer>
 </body>
