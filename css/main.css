@@ -216,10 +216,11 @@ input{
   border-radius: 0.1rem;
 }
 
+/*
 div>img{
   width: 100vw;
   visibility: hidden;
-}
+}*/
 
 /*Styles voor de artikelen*/
 
@@ -235,7 +236,7 @@ div>img{
   background-image: url("../images/moe-03.png");
   background-size: 100vw;
   width: 100vw;
-  /*height: 275em;*/
+  height: 275em;
   background-repeat: no-repeat;
 }
 
