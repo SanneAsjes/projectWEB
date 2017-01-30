@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/login.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/login.css">
     <meta name="viewport" content="width=device-width" />
 
 <title>Login</title>
@@ -11,27 +11,17 @@
 <body>
 
   <header>
-      <ul>
         <!-- Logo van de maatschappij, als je hier op drukt kom je op de homepage-->
-        <li>
-          <a href="index.html">
-            <img src="images/logo.svg" alt="logo DFDS">
-          </a>
-        </li>
-        <!-- Placeholder voor hamburger-->
-        <li>
-          <button><img src="images/burger.png" alt="burger"></button>
-        </li>
-      </ul>
-  </header>
+    <a href="index.html">
+      <img src="images/logo.svg" alt="logo DFDS">
+    </a>
 
-  <!-- <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="bladeren.html">Bladeren</a></li>
-      <li><a href="mijnverhalen">Mijn verhalen</a></li>
-    </ul>
-  </nav> -->
+    <!-- <form>
+       <input type="search" placeholder="Search">
+    </form> -->
+
+    <a href="login.html">aanmelden</a>
+  </header>
 
   <form>
   <fieldset>
@@ -39,16 +29,45 @@
       login
     </legend>
     <ul>
-    </li>
-    <label for="naam">naam</label><input id ="naam" type="text">
+    <li>
+    <label for="email">E-mail</label>
+    <input id ="email" type="email" required>
   </li>
   <li>
-    <label for="wachtwoord">wactwoord </label><input id="wachtwoord" type="password">
+    <label for="wachtwoord">Wachtwoord </label>
+    <input id="wachtwoord" type="password" required>
   </li>
-</ul>
-    <button type="submit">Login</button>
+  <li>
+    <input type="submit">Login</button>
+  </li>
+
+  </ul>
   </fieldset>
 </form>
+
+<form>
+  <fieldset>
+    <legend>
+      Ik ben nieuw
+    </legend>
+    <ul>
+      <li>
+        <label for="voornaam">Voornaam</label>
+        <input id ="voornaam" type="text" required>
+      </li>
+      <li>
+        <label for="achternaam">Achternaam</label>
+        <input id ="achternaam" type="text" required>
+      </li>
+      <li>
+        <label for="email">E-mail</label>
+        <input id ="email" type="email" required>
+      </li>
+      <li>
+        <label for="wachtwoord">Wachtwoord</label>
+        <input id ="wachtwoord" type="password" required>
+      </li>
+    </ul>
 
 </body>
 </html>

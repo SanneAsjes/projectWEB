@@ -12,47 +12,67 @@
 </head>
 
 <header>
-    <ul>
       <!-- Logo van de maatschappij, als je hier op drukt kom je op de homepage-->
-      <li>
-        <a href="index.html">
-          <img src="images/logo.svg" alt="logo DFDS">
-        </a>
-      </li>
-      <!-- Placeholder voor hamburger-->
-      <li>
-        <button><img src="images/burger.png" alt="burger"></button>
-      </li>
-    </ul>
+  <a href="index.html">
+    <img src="images/logo.svg" alt="logo DFDS">
+  </a>
+
+  <form class="search-header">
+     <input type="search" placeholder="Search">
+  </form>
+
+  <a href="login.html">aanmelden</a>
 </header>
+
+<form class="search">
+   <input type="search" placeholder="Search">
+</form>
+
 
 <!-- de populaire verhalen -->
 
-<h2>Populaire verhalen</h2>
-  <section>
-      <img src="images/foto_mobiel.png" alt="main pagina illustratie">
 
-      <h3>Regenboog</h3>
+<article>
+  <div class="uitgelicht">
+    <h2 class="uitgelicht-h2"><span>Uitgelicht verhaal</span></h2>
+    <!-- <img class="main-img"src="images/foto_mobiel.png" alt="main pagina illustratie"> -->
+    <p>Bus 21. Ik stap uit. Het is een gure dag, geen ultraviolette zonnestralen
+      die het tere huidje van mijn zoontje aant...<a href="schoorsteen.html">lees verder</a>
+    </p>
+  </div>
+    <h3>Regenboog</h3>
 
-      <p>Bus 21. Ik stap uit. Het is een gure dag, geen ultraviolette zonnestralen
-        die het tere huidje van mijn zoontje aant...<a href="verhaal.html"> Lees verder </a>
-      </p>
-      <button><a href="#">Meer populaire verhalen > </a></button>
-  </section>
+    <p>Bus 21. Ik stap uit. Het is een gure dag, geen ultraviolette zonnestralen
+      die het tere huidje van mijn zoontje aant...
+    </p>
+    <button><a href="#">Lees verder > </a></button>
+</article>
 
-<h2> Alle verhalen </h2>
-<!-- sorteer alle verhalen -->
+<section>
+  <h2> Alle verhalen </h2>
+  <!-- sorteer alle verhalen -->
+    <button>Filter</button>
+    <div>
+      <form>
+        <select>
+          <option value="0-99"> 0 - 99 </option>
+          <option value="99-0"> 99 - 0 </option>
+          <option value="hoog"> likes hoog - laag </option>
+          <option value="laag"> likes laag - hoog </option>
+        </select>
+        <label name="lengte">maximale leesduur in minuten</label>
+        <input type="range" name="lengte" min="1" max="50">
+        <ul>
+          <li> 0 </li>
+          <li> 5 </li>
+          <li> 10 </li>
+        </ul>
+      </form>
+    </div>
 
-  <select>
-    <option value="0-99"> 0 - 99 </option>
-    <option value="99-0"> 99 - 0 </option>
-    <option value="hoog"> likes hoog - laag </option>
-    <option value="laag"> likes laag - hoog </option>
-  </select>
+      <!-- Mijn vormgegeven verhalen -->
 
-  <!-- Mijn vormgegeven verhalen -->
-
-  <!-- Stijloefening 12, schoorsteen -->
+      <!-- Stijloefening 12, schoorsteen -->
 
   <article>
     <img src="images/artikel_schoorsteen.png" alt="illustratie voor het artikel schoorsteen">
@@ -62,8 +82,8 @@
     <p>Ik stap de schoorsteen uit. Mijn schoorsteen is net in slaap gevallen.
        Ik ben op weg naar de Openbare Schoors...<a href="schoorsteen.html"> Lees verder </a>
     </p>
-    <button><img src="images/add_btn.png"></button>
-    <button><img src="images/favorite_btn.png"></button>
+    <!-- <button><img src="images/add_btn.png"></button>
+    <button><img src="images/favorite_btn.png"></button> -->
   </article>
 
     <!-- Stijloefening 38 , moe -->
@@ -76,8 +96,8 @@
     <p>De buschauffeur port me wakker. We zijn bij de eindhalte, Centraal Station. Ik stap
       uit en duw de kinderwagen vo...<a href="moe.html"> Lees verder </a>
     </p>
-    <button><img src="images/add_btn.png"></button>
-    <button><img src="images/favorite_btn.png"></button>
+    <!-- <button><img src="images/add_btn.png"></button>
+    <button><img src="images/favorite_btn.png"></button> -->
   </article>
 
 <!-- Stijloefening 77, vrijdag de 13e -->
@@ -90,8 +110,12 @@
     <p>Bij het uitstappen van de bus waait mijn jas open, precies op het moment dat
       de buschauffeur de deur...<a href="vrijdag.html"> Lees verder </a>
     </p>
-    <button><img src="images/add_btn.png"></button>
-    <button><img src="images/favorite_btn.png"></button>
+    <!-- <button><img src="images/add_btn.png"></button>
+    <button><img src="images/favorite_btn.png"></button> -->
   </article>
+  
+</section>
+
+<script src="js/main.js"></script>
 </body>
 </html>

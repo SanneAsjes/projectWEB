@@ -35,6 +35,7 @@ body{
   background-color: #EEF0F1;
   width: 100vw;
   margin:0;
+  overflow-x:hidden;
 }
 
 a{
@@ -66,61 +67,149 @@ h2{
 /*De header vormgeving*/
 
 header{
-  width: 100%;
+  width: 100vw;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
   background-color: #FFF;
-}
-
-header>ul{
-  padding: 0.5em;
-  margin: 0;
   display: flex;
   justify-content: space-between;
-  list-style-type: none;
 }
 
-header>ul>li>button{
+header>a>img{
+  padding-left: 0.3em;
+}
+
+header>a:last-child{
+  padding-right: 0.8em;
   padding-top: 1em;
+  font-family: Segoe UI;
+  font-weight: normal;
+  font-size: 1.05em;
 }
 
-header>ul>li>button>img{
-  width: 4em;
-  height: 3em;
+.search-header{
+  visibility: hidden;
 }
 
-/*De styles voor het eerste deel dat linkt naar populaire verhalen*/
+/*Input searchfield BRON:  http://codepen.io/912lab/pen/LsplC*/
 
-section{
+input {
+	outline: none;
+}
+
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none;
+}
+
+input[type=search] {
+	background: #EEF0F1 url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 0.625em center;
+	border: solid 1px #EEF0F1;
+	padding: 0.563em 0.625em 0.563em 2em;
+	width: 20px;
+
+	-webkit-border-radius: 0.2em;
+	-moz-border-radius: 0.2em;
+	border-radius: 0.2em;
+
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+
+/* Demo 2 */
+input[type=search] {
+	width: 1em;
+	padding-left: 0.625em;
+	color: transparent;
+	cursor: pointer;
+}
+
+input[type=search]:focus {
+	width: 86vw;
+	padding-left: 2em;
+	color: #000;
+	background-color: #fff;
+	cursor: auto;
+  border: solid 0.126em #F6861F;
+}
+input:-moz-placeholder {
+	color: transparent;
+}
+input::-webkit-input-placeholder {
+	color: transparent;
+}
+/*De styles voor het eerste deel dat linkt naar het uitgelichte verhaal*/
+
+article{
   background-color: #002B45;
-}
-
-section>img{
-  width: 100vw;// 100% view width
-}
-
-section>h2{
+  max-width: 100vw;
   margin:0;
-  margin-top: 1em;
-  margin-left:2%;
 }
 
-section>h3{
+article>img{
+  max-width: 100vw;
+}
+
+.uitgelicht{
+  margin:0;
+  padding: 0;
+  margin-top: 0.5em;
+  background-image: url(../images/rook.jpg);
+  background-repeat: no-repeat;
+  max-width: 100vw;
+  height: 8em;
+}
+
+span{
+  margin-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.2em;
+  background-color: rgba(246, 134, 31, 0.72);
+  text-align: left;
+  font-family: DFDS Bold;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.uitgelicht-h2{
+  padding: 0;
+  margin-left:-0.7em;
+  padding-top: 0.5em;
+  text-align: left;
+  font-size: 1.8em;
+}
+
+article>div>p{
+  visibility: hidden;
+}
+
+article>h3{
   margin: 0 auto;
+  margin-top: 1em;
   color: #FFF;
   text-align: center;
 }
 
-section>p{
+article>p{
   margin: 2%;
   padding-bottom: 1em;
   color: #FFF;
 }
 
-section>p>a{
+article>p>a{
   color: #FFF;
 }
 
-section>button{
-  width: 100vw;
+article>button{
+  width: 100%;
   height: 2em;
   background-color: #F6861F;
   border: none;
@@ -129,8 +218,35 @@ section>button{
   font-size: 1.2em;
 }
 
-section>button>a{
+article>button>a{
   color: #fff;
+}
+
+/*De artikelen die onder elkaar komen te staan */
+section{
+  background-color: #fff;
+}
+
+section>h2{
+  padding-top: 0.2em;
+}
+
+/*Filter en sorteer opties*/
+section>button{
+  background-color: #434950;
+  font-size: 1.5em;
+  color: #fff;
+  padding: 0.5em;
+  width: 100vw;
+  border-radius: 0.1em;
+  border: none;
+  box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+section>div{
+  padding-top: 1em;
+  background-color: #FFFFFF;
+  border-bottom: 1em solid #EEF0F1;
 }
 
 select{
@@ -142,43 +258,118 @@ select{
   border: 1px solid;
 }
 
-/*De artikelen die onder elkaar komen te staan */
+select>option{
+  text-align: center;
+}
 
-article{
-  background-color: #FFF;
+div>form>label{
+margin-left:10%;
+}
+/*Code om de slider er fancy uit te laten zien... Bron:https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/*/
+
+div>form>input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 80%; /* Specific width is required for Firefox. */
+  background: white; /* Otherwise white in Chrome */
+  margin-left: 10%;
+}
+
+div>form>input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+div>form>input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+div>form>input[type=range]::-ms-track {
+  width: 90vw;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+/* Special styling for WebKit/Blink */
+div>form>input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 2em;
+  width: 2em;
+  border-radius: 1em;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top:-0.5em;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+div>form>input[type=range]::-webkit-slider-runnable-track {
+  width: 90vw;
+  height: 1.2em;
+  cursor: pointer;
+  background: #F6861F;
+  border-radius: 0.16em;
+  border: 0.01em solid #010101;
+}
+
+div>form>input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #F6861F;
+}
+
+div>form>ul{
+  margin:0;
+  padding:0;
+  margin-left:5%;
+  margin-right: 5%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 2em;
 }
 
-article>h3{
-  margin: 0;
-  padding-left: 1%;
-  padding-top: 0.5em;
+section>article{
+  background-color: #FFF;
+  margin-bottom: 2em;
+  border-bottom: 3em solid #EEF0F1;
 }
 
-article>p{
+section>article>p{
+  color: #002B45;
+}
+
+section>article>h3{
+  margin: 0;
+  padding-left: 5%;
+  padding-top: 0.5em;
+  color: #002B45;
+  text-align: left;
+}
+
+section>article>p{
   padding:1%;
   padding-top:0;
   margin-top:0;
 }
 
-article>img{
+section>article>img{
   width: 100vw;// 100% view width
 }
 
-article>button{
+section>article>button{
   margin-left: 2em;
 }
-article>button:nth-of-type(2){
+section>article>button:nth-of-type(2){
     margin-left:60%;
 }
 
-article>button>img{
+section>article>button>img{
   width: 2.5em;
   height: 2.5em;
 }
 
 /*CSS voor de login*/
-form{
+/*form{
   width: 30em;
   margin: auto;
   padding: auto;
@@ -214,12 +405,6 @@ input{
   max-width: 30em;
   background-color: white;
   border-radius: 0.1rem;
-}
-
-/*
-div>img{
-  width: 100vw;
-  visibility: hidden;
 }*/
 
 /*Styles voor de artikelen*/
@@ -248,7 +433,126 @@ div>img{
   background-repeat: no-repeat;
 }
 
-@media only screen and (min-width: 47.5em){
+/*=============================================== Tablet ===============================================*/
+@media only screen and (min-width: 40.625em){
+
+/*De header */
+  header{
+    margin-top: 0.5em;
+  }
+
+  .search{
+  visibility: hidden;
+  margin-top: 0.5em;
+  }
+
+  section>div>form{
+    visibility: visible;
+  }
+
+.search-header{
+    visibility: visible;
+  }
+
+  input[type=search]{
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+  }
+
+  input[type=search]:focus {
+    width: 15em;
+  }
+
+  /*Uitgelicht verhaal*/
+  article{
+    width: 100vw;
+    margin:auto;
+    height: 20em;
+  }
+
+  .uitgelicht{
+    background-image: url(../images/rook.jpg);
+    height: 20em;
+  }
+
+  .uitgelicht-h2{
+    font-size: 2em;
+  }
+
+  article>button{
+    visibility: hidden;
+  }
+
+  article>h3{
+    visibility: hidden;
+  }
+
+  section>article>h3{
+    visibility: visible;
+  }
+  span{
+    margin-left: 3%;
+  }
+
+  article>div>p{
+    background-color: rgba(0, 43, 69, 0.7);
+    padding: 1em;
+    margin:0;
+    visibility: visible;
+    color: #FFFFFF;
+    width: 40%;
+    margin-top: 8em;
+    margin-left: 60%;
+  }
+
+  article>div>p>a{
+    font-weight: 200;
+    color: #FFFFFF;
+  }
+
+  article>p{
+    visibility: hidden;
+  }
+
+  section{
+    width: 65vw;
+    margin: 0 auto;
+  }
+
+  section>button{
+    width:65vw;
+  }
+
+  form>select{
+    margin: 0;
+    padding: 0;
+    width:40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 0.5em;
+  }
+
+  section>div>form>input{
+    width: 40%;
+  }
+
+  section>article{
+    height:auto;
+    width: 65vw;
+  }
+
+  section>article>img{
+    width:65vw;
+  }
+
+  section>article>p{
+    visibility: visible;
+  }
+
+  section>article>p>a{
+    color: #002B45;
+  }
+
   .vrijdag{
     background-image: url("../images/vrijdag-02.png");
     background-size: 100vw;
@@ -273,8 +577,73 @@ div>img{
     background-repeat: no-repeat;
   }
 }
+/*=============================================== Laptop ===============================================*/
+@media only screen and (min-width: 79em){
+  header>a{
+    font-size: 1em;
+    text-transform: capitalize;
+    color: #434950;
+    margin-right: 2em;
+    margin-left: 2em;
+  }
 
-@media only screen and (min-width: 80em){
+  article{
+    width: 90%;
+    margin: 0 auto;
+    height: 25em;
+  }
+
+  article>div>p{
+    margin-top: 13em;
+  }
+
+  section{
+    margin-top: 5em;
+    width: 90%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: none;
+  }
+  section>h2{
+    width: 100%;
+  }
+
+  section>button{
+    width:100%;
+  }
+
+  section>div{
+    width: 100%;
+  }
+
+  section>div>form{
+    margin-left: 25%;
+    width: 50%;
+  }
+
+  section>article{
+    margin: 0;
+    margin-left:1%;
+    margin-right:1%;
+    padding: 0;
+    width: 30%;
+    background: none;
+  }
+
+  section>article>img{
+    width: 100%;
+    height: 8em;
+  }
+
+  section>article>p{
+    background: none;
+  }
+  .uitgelicht{
+    height: 25em;
+  }
   .vrijdag{
     background-image: url("../images/vrijdag-01.png");
     background-size: 100vw;
