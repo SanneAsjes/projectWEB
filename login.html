@@ -15,15 +15,11 @@
     <a href="index.html">
       <img src="images/logo.svg" alt="logo DFDS">
     </a>
-
-    <!-- <form>
-       <input type="search" placeholder="Search">
-    </form> -->
-
     <a href="login.html">aanmelden</a>
   </header>
 <!-- Login form -->
-  <form>
+
+  <form class="login">
   <fieldset>
     <legend>
       login
@@ -35,11 +31,11 @@
     <label for="wachtwoord">Wachtwoord </label>
     <input id="wachtwoord" type="password" required>
 
-    <input type="submit">Login</input>
+    <input type="submit" value="Log in"></input>
   </fieldset>
 </form>
 <!-- Maak een account form -->
-<form>
+<form class="nieuw">
   <fieldset>
     <legend>
       Ik ben nieuw
@@ -57,9 +53,10 @@
         <label for="wachtwoord">Wachtwoord</label>
         <input id ="wachtwoord" type="password" required>
 
-        <input type="submit">Maak account</input>
+        <input type="submit" value="Maak account"></input>
   </fieldset>
 </form>
 
+<script src="js/login.js"></script>
 </body>
 </html>

@@ -1,54 +1,211 @@
-
-
-form{
-  width: 30em;
-  margin: auto;
-  padding: auto;
-  margin-top: 2em;
-  border-style: solid 1px;
-  border-color: #002B45;
-  background-color: white;
+* {
+  box-sizing:border-box;
+  font-family: DFDS Light;
+  color: #002B45;
 }
 
-fieldset{
-  background-color: white;
+body{
+  background-color: #EEF0F1;
+  width: 100vw;
+  margin:0;
+  overflow-x:hidden;
 }
 
-fieldset > ul{
-  padding: 0;
-  margin: 0;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-}
-
-ul{
-  list-style: none;
-}
-
-label{
-  padding: 8px;
-  font-weight: 300;
-  letter-spacing: .09em;
+a{
+  font-family: DFDS Bold;
   text-transform: uppercase;
-  background-color: white;
+  text-decoration: none;
 }
 
-input{
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  margin: 1em;
-  max-width: 400px;
-  width: calc(100% - 2em);
-  vertical-align: top;
-  /*min-width: 25em;
-  max-width: 30em;
-  background-color: white;
-  border-radius: 0.1rem;*/
+a:hover{
+  color: #1B5786;
 }
 
-input:focus{
-  border: 0.1em #F6861F;
+h2, h3{
+  font-family: DFDS Bold;
+  text-transform: uppercase;
+}
+
+p{
+  font-family: Segoe UI;
+  font-weight: normal;
+  font-size: 1.05em;
+}
+
+h2{
+  text-align: center;
+  font-size: 2em;
+}
+
+
+
+/*De header vormgeving*/
+
+header{
+  width: 100vw;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+}
+
+header>a>img{
+  padding-left: 0.3em;
+}
+
+header>a:last-child{
+  padding-right: 0.8em;
+  padding-top: 1em;
+  font-family: Segoe UI;
+  font-weight: normal;
+  font-size: 1.05em;
+}
+
+.search-header{
+  visibility: hidden;
+}
+
+  form{
+    transition:all 1s;
+    transform:scale(1) rotate(-360deg) ;
+    width: 100vw;
+    margin: auto;
+    padding: auto;
+    margin-top: 2em;
+    background-color: white;
+  }
+
+  fieldset{
+    padding-top: 2em;
+    background-color: white;
+    border-style: solid 0.3em;
+    border-color: #002B45;
+    border-radius: 0.2em;
+    font-family: DFDS Bold;
+    color: #002B45;
+    font-size: 1.5em;
+  }
+
+  label{
+    width: 40%;
+    padding: 8px;
+    font-weight: 300;
+    font-family: Segoe UI;
+    font-size: 0.8em;
+    letter-spacing: .09em;
+    text-transform: capitalize;
+    background-color: white;
+  }
+
+  input{
+    position: block;
+    z-index: 1;
+    display: inline-block;
+    margin: 1em;
+    max-width: 400px;
+    width: calc(100% - 2em);
+    vertical-align: top;
+    /*min-width: 25em;
+    max-width: 30em;
+    background-color: white;
+    border-radius: 0.1rem;*/
+  }
+
+  input:focus{
+    border: 0.1em #F6861F;
+  }
+
+  input {
+  	outline: none;
+  }
+
+  input {
+  	-webkit-appearance: textfield;
+  	-webkit-box-sizing: content-box;
+  	font-family: inherit;
+  	font-size: 100%;
+  }
+  input::-webkit-search-decoration,
+  input::-webkit-search-cancel-button {
+  	display: none;
+  }
+
+  input {
+
+  	border: solid 0.1em #EEF0F1;
+  	padding: 0.563em 0.625em 0.563em 2em;
+  	width: 10em;
+
+  	-webkit-border-radius: 0.2em;
+  	-moz-border-radius: 0.2em;
+  	border-radius: 0.2em;
+
+  	-webkit-transition: all .5s;
+  	-moz-transition: all .5s;
+  	transition: all .5s;
+  }
+
+  input {
+  	width: 80%;
+  	padding-left: 0.625em;
+  	color: transparent;
+  	cursor: pointer;
+    font-family: Segoe UI;
+    color: #002B45;
+  }
+
+  input:focus {
+  	width: 80%;
+  	color: #000;
+  	background-color: #fff;
+  	cursor: auto;
+    border: solid 0.226em #F6861F;
+  }
+  input:-moz-placeholder {
+  	color: transparent;
+  }
+  input::-webkit-input-placeholder {
+  	color: transparent;
+  }
+
+  input:valid{
+    border-color: #1B5786
+  }
+
+
+  input[type=submit]{
+    color: #FFF;
+    border: none;
+  }
+
+  input[type=submit]:hover{
+    transition:all 0.5s;
+    background-color: #F6861F;
+    transform:scale(1.05);
+  }
+
+@media only screen and (min-width: 40em){
+
+  form{
+    width: 35em;
+  }
+
+  input{
+    width: 20em;
+  }
+
+  input:focus{
+    width: 20em;
+  }
+
+}
+
+/*=========================De classes voor de javascript============================*/
+
+.joepie{
+  transition:all 1s;
+  transform:scale(1.5) rotate(360deg) ;
+  margin-bottom: 15em;
+  margin-top: 10em;
 }

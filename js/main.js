@@ -10,4 +10,5 @@ var dance = function () {
 }
 
 /* 2. voeg een event toe aan een element */
+
 button.addEventListener('click', dance);
