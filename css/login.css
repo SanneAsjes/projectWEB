@@ -1,3 +1,5 @@
+
+
 form{
   width: 30em;
   margin: auto;
@@ -21,6 +23,10 @@ fieldset > ul{
   background-color: white;
 }
 
+ul{
+  list-style: none;
+}
+
 label{
   padding: 8px;
   font-weight: 300;
@@ -30,8 +36,19 @@ label{
 }
 
 input{
-  min-width: 25em;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 1em;
+  max-width: 400px;
+  width: calc(100% - 2em);
+  vertical-align: top;
+  /*min-width: 25em;
   max-width: 30em;
   background-color: white;
-  border-radius: 0.1rem;
+  border-radius: 0.1rem;*/
+}
+
+input:focus{
+  border: 0.1em #F6861F;
 }

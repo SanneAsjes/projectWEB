@@ -25,6 +25,8 @@ Voor titels altijd UPPERCASE en Bold.
 */
 
 /* Generic styling */
+
+
 * {
   box-sizing:border-box;
   font-family: DFDS Light;
@@ -356,17 +358,108 @@ section>article>img{
   width: 100vw;// 100% view width
 }
 
-section>article>button{
-  margin-left: 2em;
-}
-section>article>button:nth-of-type(2){
-    margin-left:60%;
-}
 
-section>article>button>img{
-  width: 2.5em;
-  height: 2.5em;
-}
+
+    /*==========het hartje bron: http://codepen.io/GertjandW/pen/raJpep============*/
+    div.heart-shape {
+      position: relative;
+      left: 10px;
+      top: 10px;
+      width: 20px;
+      height: 20px;
+      background-color: #434950;
+      cursor: pointer;
+      margin-left: 90%;
+      transition:all 0.5s;
+    }
+
+    div.heart-shape:after {
+      position: absolute;
+      top: -10px;
+      right: 0px;
+      width: 20px;
+      height: 20px;
+      content: '';
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      background-color: #434950;
+      cursor: pointer;
+      transition:all 0.5s;
+    }
+
+    div.heart-shape:before {
+      position: absolute;
+      bottom: 0px;
+      left: -10px;
+      width: 20px;
+      height: 20px;
+      content: '';
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      background-color: #434950;
+      cursor: pointer;
+      transition:all 0.5s;
+    }
+
+    div.heart-shape{
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    div.heart-filled{
+      position: relative;
+      left: 10px;
+      top: 10px;
+      width: 20px;
+      height: 20px;
+      background-color: #F6861F;
+      cursor: pointer;
+      margin-left: 90%;
+
+    }
+      div.heart-filled:after{
+        position: absolute;
+        top: -10px;
+        right: 0px;
+        width: 20px;
+        height: 20px;
+        content: '';
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        background-color: #F6861F;
+        cursor: pointer;
+      }
+  div.heart-filled:before{
+    position: absolute;
+    bottom: 0px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    content: '';
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #F6861F;
+    cursor: pointer;
+  }
+  div.heart-filled{
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
 
 /*CSS voor de login*/
 /*form{
@@ -452,6 +545,7 @@ input{
 
 .search-header{
     visibility: visible;
+    margin-top: 0.5em;
   }
 
   input[type=search]{
@@ -605,7 +699,7 @@ input{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background: none;
+    background: #fff;
   }
   section>h2{
     width: 100%;
@@ -641,6 +735,8 @@ input{
   section>article>p{
     background: none;
   }
+
+
   .uitgelicht{
     height: 25em;
   }
