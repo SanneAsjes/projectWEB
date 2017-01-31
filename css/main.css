@@ -112,9 +112,9 @@ input::-webkit-search-cancel-button {
 
 input[type=search] {
 	background: #EEF0F1 url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 0.625em center;
-	border: solid 1px #EEF0F1;
+	border: solid 0.0625em #EEF0F1;
 	padding: 0.563em 0.625em 0.563em 2em;
-	width: 20px;
+	width: 1.2em;
 
 	-webkit-border-radius: 0.2em;
 	-moz-border-radius: 0.2em;
@@ -248,7 +248,7 @@ section>button{
   width: 100vw;
   border-radius: 0.1em;
   border: none;
-  box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2), 0 0.5em 1.2em 0 rgba(0,0,0,0.19);
 }
 
 section>div{
@@ -263,7 +263,7 @@ select{
   width: 60%;
   font-size: 1em;
   margin-bottom: 1em;
-  border: 1px solid;
+  border: 0.09em solid;
 }
 
 select>option{
@@ -309,7 +309,7 @@ div>form>input[type=range]::-webkit-slider-thumb {
   background: #ffffff;
   cursor: pointer;
   margin-top:-0.5em;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+  box-shadow: 0.063em 0.063em 0.063em #000000, 0em 0em 0.063em #0d0d0d; /* Add cool effects to your sliders! */
 }
 
 div>form>input[type=range]::-webkit-slider-runnable-track {
@@ -375,10 +375,10 @@ section>article>img{
     /*==========het hartje bron: http://codepen.io/GertjandW/pen/raJpep============*/
     div.heart-shape {
       position: relative;
-      left: 10px;
-      top: 10px;
-      width: 20px;
-      height: 20px;
+      left: 0.625em
+      top: 0.625em;
+      width: 1.250em;
+      height: 1.250em;
       background-color: #434950;
       cursor: pointer;
       margin-left: 90%;
@@ -387,10 +387,10 @@ section>article>img{
 
     div.heart-shape:after {
       position: absolute;
-      top: -10px;
-      right: 0px;
-      width: 20px;
-      height: 20px;
+      top: -0.625em;
+      right: 0em;
+      width: 1.250em;
+      height: 1.250em;
       content: '';
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
@@ -403,10 +403,10 @@ section>article>img{
 
     div.heart-shape:before {
       position: absolute;
-      bottom: 0px;
-      left: -10px;
-      width: 20px;
-      height: 20px;
+      bottom: 0em;
+      left: -0.625em;
+      width: 1.250em;
+      height: 1.250em;
       content: '';
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
@@ -427,10 +427,10 @@ section>article>img{
 
     div.heart-filled{
       position: relative;
-      left: 10px;
-      top: 10px;
-      width: 20px;
-      height: 20px;
+      left: 0.625em;
+      top: 0.625em;
+      width: 1.250em;
+      height: 1.250em;
       background-color: #F6861F;
       cursor: pointer;
       margin-left: 90%;
@@ -438,10 +438,10 @@ section>article>img{
     }
       div.heart-filled:after{
         position: absolute;
-        top: -10px;
-        right: 0px;
-        width: 20px;
-        height: 20px;
+        top: -0.625em;
+        right: 0em;
+        width: 1.250em;
+        height: 1.250em;
         content: '';
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
@@ -452,10 +452,10 @@ section>article>img{
       }
   div.heart-filled:before{
     position: absolute;
-    bottom: 0px;
-    left: -10px;
-    width: 20px;
-    height: 20px;
+    bottom: 0em;
+    left: -0.625em;
+    width: 1.250em;
+    height: 1.250em;
     content: '';
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -525,7 +525,7 @@ section>article>img{
 
   input[type=search]{
     background-color: #FFFFFF;
-    border: 1px solid #FFFFFF;
+    border: 0.0625em solid #FFFFFF;
   }
 
   input[type=search]:focus {

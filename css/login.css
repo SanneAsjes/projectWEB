@@ -89,7 +89,7 @@ header>a:last-child{
 
   label{
     width: 40%;
-    padding: 8px;
+    padding: 0.5em;
     font-weight: 300;
     font-family: Segoe UI;
     font-size: 0.8em;
@@ -103,7 +103,7 @@ header>a:last-child{
     z-index: 1;
     display: inline-block;
     margin: 1em;
-    max-width: 400px;
+    max-width: 25em;
     width: calc(100% - 2em);
     vertical-align: top;
     /*min-width: 25em;
