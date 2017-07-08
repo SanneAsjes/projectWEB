@@ -52,6 +52,7 @@ header{
 
 header>a>img{
   padding-left: 0.3em;
+  width: 80%;
 }
 
 header>a:last-child{
@@ -68,7 +69,7 @@ header>a:last-child{
 
   form{
     transition:all 1s;
-    transform:scale(1) rotate(-360deg) ;
+    transform:scale(1);
     width: 100vw;
     margin: auto;
     padding: auto;
@@ -205,7 +206,9 @@ header>a:last-child{
 
 .joepie{
   transition:all 1s;
-  transform:scale(1.5) rotate(360deg) ;
+  transform: rotateZ(180deg);
+  animation: three 2s infinite;
+  animation-direction: alternate;
   margin-bottom: 15em;
-  margin-top: 10em;
+  margin-top: 4em;
 }
