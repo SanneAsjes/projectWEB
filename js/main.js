@@ -14,6 +14,8 @@ var dance = function () {
 button.addEventListener('click', dance);
 
 
+/* Bron: https://www.w3schools.com/howto/howto_js_accordion.asp*/
+
 var acc = document.getElementsByClassName("accordion");
 var i;
 
